@@ -8,7 +8,7 @@ import com.fco271292.infrastructure.rest.mapper.UserMapper
 
 import ch.qos.logback.classic.Logger
 
-@Component
+//@Component
 class UserUseCase {
 	
 	Logger logger = LoggerFactory.getLogger(this.class)

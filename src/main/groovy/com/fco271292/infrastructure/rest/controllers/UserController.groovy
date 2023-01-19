@@ -17,7 +17,7 @@ import com.fco271292.infrastructure.rest.request.UserRequest
 @RequestMapping(path = "user")
 class UserController {
 	
-	@Autowired
+//	@Autowired
 	UserUseCase userUseCase
 	
 	UserController(UserUseCase userUseCase) {

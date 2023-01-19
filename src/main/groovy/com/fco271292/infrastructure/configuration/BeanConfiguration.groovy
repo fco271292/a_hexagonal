@@ -11,7 +11,7 @@ import com.fco271292.infrastructure.rest.mapper.UserMapper
 class BeanConfiguration {
 	
 	@Bean
-	def userUserCase(UserPort userPort, UserMapper userMapper) {
+	UserUseCase userUserCase(UserPort userPort, UserMapper userMapper) {
 		new UserUseCase(userPort, userMapper)
 	}
 	
