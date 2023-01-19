@@ -4,4 +4,5 @@ interface UserInputPort {
 	
 	def findById(def id)
 	def save(def entity)
+	def findAll()
 }

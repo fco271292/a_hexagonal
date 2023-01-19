@@ -30,7 +30,7 @@ class UserUseCase implements UserInputPort {
 		if (userEntity) {
 			userResponse = userMapper.toUserResponse(userEntity?.get())
 		}		
-		logger.info "${userResponse}"
+		logger.info "--> ${userResponse}"
 		userResponse
 	}
 
@@ -39,8 +39,16 @@ class UserUseCase implements UserInputPort {
 		logger.info "<-- ${entity}"
 		def userEntity = entityRepository.save(entity)
 		def userResponse = userMapper.toUserResponse(userEntity)
-		logger.info "${userResponse}"
+		logger.info "--> ${userResponse}"
 		userResponse
 	}
+
+	@Override
+	def findAll() {
+		def userEntityList = entityRepository.findAll()
+		logger.info "--> List: ${userEntityList?.size()}"
+		def userResponseList = userEntityList?.collect { userEntity -> userMapper.toUserResponse(userEntity)}
+		userResponseList
+	}	
 	
 }

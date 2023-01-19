@@ -36,7 +36,7 @@ class UserRepository implements EntityRepository {
 
 	@Override
 	def findAll() {
-		
+		def userEntityList = userJPARepository.findAll()
 	}
 	
 }

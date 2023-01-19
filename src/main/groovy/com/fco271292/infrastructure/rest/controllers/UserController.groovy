@@ -31,4 +31,9 @@ class UserController {
 	def save(@RequestBody UserRequest userRequest) {
 		userInputPort.save(userRequest)
 	}
+	
+	@GetMapping(path = "findAll")
+	def findAll() {
+		userInputPort.findAll()
+	}
 }
